@@ -6,8 +6,10 @@ import (
 	"github.com/labstack/echo"
 )
 
-func home(c echo.Context) error {
-	return c.Render(http.StatusOK, "index.html", map[string]interface{}{
-		"name": "Jonathan",
+func index(c echo.Context) error {
+	content := c.Render(http.StatusOK, "wrapper.html", map[string]interface{}{
+		"appContent": "index.html",
+		"data":       "Placeholder",
 	})
+	return content
 }

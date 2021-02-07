@@ -37,8 +37,8 @@ func main() {
 }
 
 func defineRoutes(app *echo.Echo) {
-	app.GET("/", home).Name = "/"
-	app.GET("/home", home).Name = "/"
-	app.GET("/network", home).Name = "/network"
-	app.GET("/policy", home).Name = "/policy"
+	app.GET("/", index).Name = "/"
+	app.GET("/home", index).Name = "/"
+	app.GET("/network", index).Name = "/network"
+	app.GET("/policy", index).Name = "/policy"
 }
