@@ -1,0 +1,17 @@
+prompts:
+    - question1:
+        validation: checkNum 
+        type: prompt
+    - question2:
+        validation: checkLength
+        type: prompt
+        validationParam:
+        - 10
+    - question3:
+        type: select
+        options:
+            - orange
+            - banana
+            - apple
+            - coffee        
+      
