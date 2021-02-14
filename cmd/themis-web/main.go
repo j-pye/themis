@@ -21,7 +21,7 @@ func main() {
 
 	app := echo.New()
 	// specify asset directories
-	app.Static("/", "assets")
+	app.Static("/", path+"/cmd/themis-web/public/assets")
 	// attach renderer for templates and load all templates
 	renderer := &TemplateRenderer{
 		templates: template.Must(template.ParseGlob(path + "/cmd/themis-web/public/*/*.html")),

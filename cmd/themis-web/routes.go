@@ -7,9 +7,8 @@ import (
 )
 
 func index(c echo.Context) error {
-	content := c.Render(http.StatusOK, "wrapper.html", map[string]interface{}{
-		"appContent": "index.html",
-		"data":       "Placeholder",
+	content := c.Render(http.StatusOK, "index", map[string]interface{}{
+		"data": "Placeholder",
 	})
 	return content
 }
