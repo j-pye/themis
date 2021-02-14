@@ -32,6 +32,8 @@ func main() {
 	app.Use(middleware.Recover())
 	// set all available routes
 	defineRoutes(app)
+	// enable websockets
+	defineWebsockets(app)
 	// start app on port
 	app.Logger.Fatal(app.Start(":" + appPort))
 }
@@ -41,4 +43,8 @@ func defineRoutes(app *echo.Echo) {
 	app.GET("/home", index).Name = "/"
 	app.GET("/network", index).Name = "/network"
 	app.GET("/policy", index).Name = "/policy"
+}
+
+func defineWebsockets(app *echo.Echo) {
+	app.GET("/websocket", websocketHandler)
 }
