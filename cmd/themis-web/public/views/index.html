@@ -1,6 +1,11 @@
 {{define "index"}}
-<h1 class="title">Hello {{.}}</h1>
-
-<p>Stuff
-</p>
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" }}
+{{ template "noscript" }}
+{{ template "header" }}
+<h1 class="title">Hello {{index . "data"}}</h1>
+{{ template "app" }}
+{{ template "footer" }}
+</html>
 {{end}}
